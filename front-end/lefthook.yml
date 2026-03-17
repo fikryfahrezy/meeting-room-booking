@@ -16,6 +16,8 @@ pre-commit:
         - "*.css"
         - "*.ts"
         - "*.js"
+        - "*.tsx"
+        - "*.jsx"
         - "*.vue"
       group:
         piped: true
