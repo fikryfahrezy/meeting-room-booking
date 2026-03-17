@@ -1,0 +1,36 @@
+{
+  "name": "front-end",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "bun": ">=1.2"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "4.5.1",
+    "clsx": "2.1.1",
+    "nuxt": "4.4.2",
+    "tailwind-merge": "3.5.0",
+    "vue": "3.5.30",
+    "vue-router": "5.0.3"
+  },
+  "devDependencies": {
+    "@nuxt/a11y": "1.0.0-alpha.1",
+    "@nuxt/eslint": "1.15.2",
+    "@nuxt/hints": "1.0.0",
+    "@nuxt/test-utils": "4.0.0",
+    "eslint": "9.39.2",
+    "prettier": "3.8.1",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "tailwindcss": "4.2.1",
+    "typescript": "5.9.3"
+  }
+}

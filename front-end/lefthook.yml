@@ -1,0 +1,24 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - root: "front-end/"
+      stage_fixed: true
+      glob:
+        - "*.md"
+        - "*.json"
+        - "*.yaml"
+      run: bun run prettier --write {staged_files}
+
+    - root: "front-end/"
+      stage_fixed: true
+      glob:
+        - "*.html"
+        - "*.css"
+        - "*.ts"
+        - "*.js"
+        - "*.vue"
+      group:
+        piped: true
+        jobs:
+          - run: bun run eslint {staged_files}
+          - run: bun run prettier --write {staged_files}
