@@ -1,6 +1,6 @@
 # use the official Bun image
 # see all versions at https://hub.docker.com/r/oven/bun/tags
-FROM oven/bun:1.3.9 AS base
+FROM oven/bun:1.3.10-debian AS base
 WORKDIR /usr/src/app
 
 # install dependencies into temp directory
@@ -35,4 +35,8 @@ COPY --from=prerelease /usr/src/app/package.json .
 USER bun
 ARG PORT=3000
 EXPOSE $PORT/tcp
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:${PORT}/api/health || exit 1
+
 ENTRYPOINT [ "bun", "run", ".output/server/index.mjs" ]
