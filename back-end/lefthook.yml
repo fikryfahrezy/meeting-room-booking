@@ -1,0 +1,12 @@
+pre-commit:
+  parallel: true
+  jobs:
+    - root: "back-end/"
+      glob:
+        - "**/*.java"
+      group:
+        piped: true
+        jobs:
+          - run: ./gradlew check
+          - run: ./gradlew spotlessApply
+            stage_fixed: true

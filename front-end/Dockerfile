@@ -43,6 +43,6 @@ ARG PORT=3000
 EXPOSE $PORT/tcp
 
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD curl -f http://localhost:${PORT}/api/health || exit 1
+    CMD curl -f http://localhost:${PORT}
 
 ENTRYPOINT [ "bun", "run", ".output/server/index.mjs" ]

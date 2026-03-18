@@ -1,14 +1,11 @@
 services:
-  front-end:
+  back-end:
     build:
       context: .
       dockerfile: ./Dockerfile
     restart: unless-stopped
-    env_file:
-      - path: ./.env
-        required: true
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:3000"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/greeting"]
       interval: 5s
       timeout: 5s
       retries: 5
