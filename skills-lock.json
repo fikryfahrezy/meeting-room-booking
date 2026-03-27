@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
+    },
+    "msw": {
+      "source": "pproenca/dot-skills",
+      "sourceType": "github",
+      "computedHash": "c432eaa96c11e729a6d305988c79bf944d6a741bc55e6a51ba5fae8d6031f976"
+    },
+    "playwright-best-practices": {
+      "source": "currents-dev/playwright-best-practices-skill",
+      "sourceType": "github",
+      "computedHash": "320eaf861e3a0a923bfaad0726cb311a3fe30093378f8d26c89b9c5ae5c42b35"
+    },
+    "product-manager": {
+      "source": "aj-geddes/claude-code-bmad-skills",
+      "sourceType": "github",
+      "computedHash": "b764a970e75e086ad7602bcbbf573701847d068745311ca4e4316cdccf77dc03"
+    },
+    "typescript-expert": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "f0f625132cf53116cb27725926e2c99f142861b9063d459938dd85fbf8e2bf61"
+    },
+    "vue": {
+      "source": "antfu/skills",
+      "sourceType": "github",
+      "computedHash": "9c241141e07e836e4f0537c63e8f929fba3767c2997250be38e699f19b75e3f2"
+    }
+  }
+}
