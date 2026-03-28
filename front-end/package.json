@@ -10,7 +10,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && msw init ./public --save",
+    "postinstall": "nuxt prepare && if [ \"$NODE_ENV\" != 'production' -a \"$CI\" != 'true' ]; then msw init ./public --save; fi",
     "type-check": "vue-tsc --build --noEmit",
     "lint": "eslint --ext .ts,.vue .",
     "msw:init": "if [ \"$NODE_ENV\" != 'production' -a \"$CI\" != 'true' ]; then msw init ./public --save; fi",
